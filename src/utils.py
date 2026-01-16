@@ -26,6 +26,10 @@ def check_correctness(target, reference, tolerance=1e-4):
     Returns:
         True if matrices are close within the given tolerance, False otherwise.
     """
+    if hasattr(target, 'get'): 
+        target = target.get()
+    if hasattr(reference, 'get'): 
+        reference = reference.get()
     try:
         np.testing.assert_allclose(target, reference, atol=tolerance, rtol=tolerance)
         return True
