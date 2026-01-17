@@ -1,6 +1,16 @@
+"""
+Module: cpu_baseline.py
+Description:
+    CPU Baseline Implementation for Matrix Multiplication.
+    This module provides a straightforward CPU implementation of matrix multiplication
+    using triple nested loops.
+Functions:
+    - cpu_matmul: Performs matrix multiplication on two input matrices A and B.
+"""
+
 import numpy as np
 
-def cpu_matmul(A, B):
+def cpu_matmul(A: np.ndarray, B: np.ndarray) -> np.ndarray:
     """
     Standard Matrix Multiplication using Triple Nested Loops.
     C[i][j] = sum(A[i][k] * B[k][j])

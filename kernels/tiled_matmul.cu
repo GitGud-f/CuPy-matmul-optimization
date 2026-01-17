@@ -1,4 +1,3 @@
-%%writefile kernels/tiled_matmul.cu
 extern "C" {
 
     __global__ void tiled_matmul_kernel(const float* A, const float* B, float* C, int N) {
